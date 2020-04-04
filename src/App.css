@@ -1,25 +1,26 @@
 .wrapper {
-	max-width: 900px;
-	background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-	display: block;
-	margin: 0 auto;
-	height: 600px;
+    max-width: 900px;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    display: block;
+    margin: 0 auto;
+    height: 450px;
     border-radius: 20px;
     margin-top: 50px;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
 .container {
     display: grid;
-    grid-template-columns: 250px 160px 1fr;
-    grid-template-rows: 200px ;
+    grid-template-columns: 220px 150px 1fr 200px;
+    grid-template-rows: 200px;
 }
 
-.sun-img{
+.sun-img {
     display: block;
     margin: 0 auto;
 }
 
-.temperature{
+.temperature {
     margin-top: 40px;
 }
 
@@ -42,15 +43,21 @@
     font-size: 28px;
 }
 
-.column-third h1{
+.column-third h1 {
     font-family: "Roboto Slab",
-    serif;
+        serif;
     font-size: 36px;
-    margin: 50px 0 0 40px; 
+    margin: 50px 0 0 40px;
 }
 
 .column-third ul {
     list-style: none;
 }
 
+.weather-conditions li {
+    font-weight: 600;
+}
 
+.column-fourth{
+    background-color: red;
+}
