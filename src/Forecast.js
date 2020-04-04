@@ -4,12 +4,12 @@ export default function Forecast() {
 	return (
 		<div className="forecast">
 			<div className="forecast-container">
-				<div className="forecast-column">26 April</div>
-				<div className="forecast-column">27 April</div>
-				<div className="forecast-column">28 April</div>
-				<div className="forecast-column">29 April</div>
-				<div className="forecast-column">30 April</div>
-				<div className="forecast-column">1 May</div>
+				<div className="forecast-date">26 April</div>
+				<div className="forecast-date">27 April</div>
+				<div className="forecast-date">28 April</div>
+				<div className="forecast-date">29 April</div>
+				<div className="forecast-date">30 April</div>
+				<div className="forecast-date">1 May</div>
 				<div className="forecast-temperature">10º</div>
 				<div className="forecast-temperature">12º</div>
 				<div className="forecast-temperature">9º</div>
