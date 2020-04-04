@@ -16,8 +16,10 @@ h1 {
     display: grid;
     border: black 1px solid;
     background-color: white;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
 }
 
-
+.column{
+    background-color: yellow;
+}
