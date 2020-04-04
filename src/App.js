@@ -4,6 +4,7 @@ import Forecast from "./Forecast";
 import "./Forecast.css";
 import SearchEngine from "./SearchEngine";
 import "./SearchEngine.css";
+import Temperature from "./Temperature";
 
 export default function App() {
 	return (
@@ -19,12 +20,7 @@ export default function App() {
 						/>
 					</div>
 					<div className="column-two column">
-						<h2 className="temperature">
-							150{" "}
-							<span className="metrics">
-								º<a href="#">C</a> | <a href="#">F</a>
-							</span>
-						</h2>
+						<Temperature />
 					</div>
 					<div className="column-third column">
 						<h1>Lisbon</h1>
