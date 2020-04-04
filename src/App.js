@@ -24,17 +24,12 @@ export default function App() {
 					</div>
 					<div className="column-third column">
 						<h1>Lisbon</h1>
-					</div>
-					<div className="column-fourth column"></div>
-					<div className="column-fifth column">One</div>
-					<div className="column-sixth column">
 						<ul className="weather-conditions">
-							<li>Wind</li>
-							<li>Precipitation</li>
-							<li>Real Feel</li>
+							<li>Wind: </li>
+							<li>Precipitation: </li>
+							<li>Real Feel: </li>
 						</ul>
 					</div>
-					<div className="column-seventh column"></div>
 				</div>
 			</div>
 		</div>
