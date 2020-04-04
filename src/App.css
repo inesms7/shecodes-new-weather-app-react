@@ -23,3 +23,27 @@ h1 {
 .column{
     background-color: yellow;
 }
+
+.column-one {
+    background-color: pink;
+}
+
+.column-two {
+    background-color: royalblue;
+}
+
+.column-third {
+    background-color: aqua;
+}
+
+.column-fourth {
+    background-color: aliceblue;
+}
+
+.column-fifth {
+    background-color: chocolate;
+}
+
+.column-sixth {
+    background-color: cornflowerblue;
+}
