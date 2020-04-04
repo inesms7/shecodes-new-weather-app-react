@@ -11,7 +11,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 220px 150px 1fr 200px;
+    grid-template-columns: 220px 150px 1fr 250px;
     grid-template-rows: 200px;
 }
 
@@ -58,6 +58,6 @@
     font-weight: 600;
 }
 
-.column-fourth{
-    background-color: red;
+.column-fourth {
+    border: 1px solid green;
 }

@@ -3,6 +3,7 @@ import "./App.css";
 import Forecast from "./Forecast";
 import "./Forecast.css";
 import SearchEngine from "./SearchEngine";
+import "./SearchEngine.css";
 
 export default function App() {
 	return (

@@ -6,7 +6,7 @@ export default function SearchEngine(){
     return (
         <form className="search-form">
             <input type="text" className="form-input"/>
-            <button type="submit" className="submit-form"></button>
+            <button type="submit" className="submit-form">Search</button>
         </form>
     )
 }
