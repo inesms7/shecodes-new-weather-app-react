@@ -1,8 +1,23 @@
 .wrapper {
-    max-width: 900px;
-    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-    display: block;
-    margin: 0 auto;
-    height: 600px;
+	max-width: 900px;
+	background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+	display: block;
+	margin: 0 auto;
+	height: 600px;
     border-radius: 20px;
+    margin-top: 50px;
 }
+
+h1 {
+	font-family: "Roboto Slab", serif;
+}
+
+.container {
+    display: grid;
+    border: black 1px solid;
+    background-color: white;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: 100px 100px 100px 100px;
+}
+
+
