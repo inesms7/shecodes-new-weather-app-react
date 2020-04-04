@@ -20,7 +20,7 @@ export default function App() {
 						/>
 					</div>
 					<div className="column-two column">
-						<Temperature />
+						<Temperature temp="50"/>
 					</div>
 					<div className="column-third column">
 						<h1>Lisbon</h1>
