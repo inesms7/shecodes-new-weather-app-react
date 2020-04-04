@@ -7,22 +7,34 @@ export default function App() {
 			<div className="wrapper">
 				<div className="container">
 					<div className="column-one column">
-						<img src="" alt="" />
+						<img
+							src="https://i.dlpng.com/static/png/117769_preview.png"
+							alt="sunny-day"
+							width="80%"
+							className="sun-img"
+						/>
 					</div>
 					<div className="column-two column">
-						<h2 className="temperature">15 <span>º</span></h2>
+						<h2 className="temperature">
+							150{" "}
+							<span className="metrics">
+								º<a href="#">C</a> | <a href="#">F</a>
+							</span>
+						</h2>
 					</div>
-          <div className="column-third column">
-            <h1>Lisbon</h1>	
+					<div className="column-third column">
+						<h1>Lisbon</h1>
 					</div>
-					<div className="column-fourthc column">
-            <ul className="weather-conditions">
+					<div className="column-fourth column"></div>
+					<div className="column-fifth column">One</div>
+					<div className="column-sixth column">
+						<ul className="weather-conditions">
 							<li>Wind</li>
 							<li>Precipitation</li>
 							<li>Real Feel</li>
-						</ul>One</div>
-					<div className="column-fifth column">One</div>
-					<div className="column-six column">One</div>
+						</ul>
+					</div>
+					<div className="column-seventh column"></div>
 				</div>
 			</div>
 		</div>

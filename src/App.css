@@ -8,36 +8,50 @@
     margin-top: 50px;
 }
 
-h1 {
-	font-family: "Roboto Slab", serif;
-}
-
 .container {
     display: grid;
     border: black 1px solid;
     background-color: white;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-columns: 250px 160px 1fr;
+    grid-template-rows: 150px auto;
 }
 
-.column{
-    background-color: yellow;
-}
-
-.column-one {
-    background-color: pink;
+.sun-img{
+    display: block;
+    margin: 0 auto;
 }
 
 .column-two {
-    background-color: royalblue;
+    text-align: center;
+    font-size: 28px;
+    background: olive;
 }
 
-.column-third {
-    background-color: aqua;
+.column-third h1{
+    font-family: "Roboto Slab",
+    serif;
+    font-size: 36px;
+    margin-top: 40px;
+    background-color: orange;
+}
+.metrics {
+    font-size: 26px;
+    font-weight: lighter;
+    color: black;
+}
+
+.metrics a{
+    text-decoration: none;
+    font-size: 26px;
+    color: black
 }
 
 .column-fourth {
     background-color: aliceblue;
+}
+
+.column-fourth li {
+    list-style: none;
 }
 
 .column-fifth {
@@ -46,4 +60,8 @@ h1 {
 
 .column-sixth {
     background-color: cornflowerblue;
+}
+
+.column-seventh {
+    background-color: orange;
 }
