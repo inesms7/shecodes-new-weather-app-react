@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import Forecast from "./Forecast";
+import "./Forecast.css";
 
 export default function App() {
 	return (
@@ -31,6 +33,7 @@ export default function App() {
 						</ul>
 					</div>
 				</div>
+        <Forecast />
 			</div>
 		</div>
 	);
