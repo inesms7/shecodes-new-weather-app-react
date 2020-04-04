@@ -37,7 +37,6 @@
     color: black;
 }
 
-
 .column-two {
     text-align: center;
     font-size: 28px;
@@ -56,8 +55,4 @@
 
 .weather-conditions li {
     font-weight: 600;
-}
-
-.column-fourth {
-    border: 1px solid green;
 }
