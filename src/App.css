@@ -53,6 +53,6 @@
     list-style: none;
 }
 
-.weather-conditions li {
-    font-weight: 600;
+.description {
+    font-weight: 700;
 }
