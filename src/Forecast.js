@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 import "./App.css";
 import "./Forecast.css";
 import Axios from "axios";
@@ -77,3 +77,4 @@ export default function Forecast() {
 		</div>
 	);
 }
+*/

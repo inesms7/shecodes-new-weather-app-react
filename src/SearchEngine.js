@@ -27,10 +27,7 @@ export default function SearchEngine() {
 		</div>
 	);
 	}else {
-			let apiKey = "3cfbc7eebafcf9149917ab5969c53e6c";
-			let city = "Lisbon";
-			let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-			Axios.get(weatherUrl).then(handleResponse);
+			
 
 	return "loading..."
 
