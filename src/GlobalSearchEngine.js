@@ -13,7 +13,7 @@ export default function GlobalSearchEngine() {
 			humidity: response.data.main.humidity,
 			wind: response.data.wind.speed,
 			city: response.data.name,
-			//date: newDate(response.data.dt * 1000),
+			date: newDate(response.data.dt * 1000),
 			description: response.data.weather[0].description,
 			icon: response.data.weather[0].icon,
 		});
@@ -24,7 +24,7 @@ export default function GlobalSearchEngine() {
             <div className="container">
                 <div className="column-one column">
                     <img
-                        src={weatherinfo.iconUrl}
+                        src={weatherinfo.icon}
                         alt={weatherinfo.description}
                         width="80%"
                         className="sun-img"
@@ -49,7 +49,7 @@ export default function GlobalSearchEngine() {
                 <div className="column-fourth column">
                     <div>
                         <p className="date">
-                            4 de Abril, 2020 | <span className="time"> 10:00</span>
+                           <Date date={weatherinfo.date}/> | <span className="time"> 10:00</span>
                         </p>
                         <form className="search-form">
                             <input type="search" className="form-input" />
