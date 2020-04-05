@@ -1,20 +1,17 @@
 import React from "react";
 import UpdatedDate from "./UpdatedDate";
 import Icon from "./Icon";
+import Convertor from "./Convertor";
 
 export default function Temperature(props) {
 	return (
 		<div className="container">
 			<div className="column-one column">
-				<Icon code={props.weather.info} />
+				<Icon code={props.weather.info} classNaMe="sun-img" />
 			</div>
 			<div className="column-two column">
-				<h2 className="temperature">
-					{Math.round(props.weather.temperature)}{" "}
-					<span className="metrics">
-						º<a href="#">C</a> | <a href="#">F</a>
-					</span>
-				</h2>
+				<Convertor celsius={props.data.temperature}/>
+				
 			</div>
 			<div className="column-third column">
 				<h1>{props.weather.city}</h1>
