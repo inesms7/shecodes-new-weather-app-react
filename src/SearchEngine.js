@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 import "./App.css";
+import Temperature from "./Temperature";
+import Axios from "axios";
 
 export default function SearchEngine() {
+	
+	function handleResponse(response){
+
+	}
+	
 	let apiKey = "3cfbc7eebafcf9149917ab5969c53e6c";
 	let city = "Lisbon";
-	let weatherUrl = `https: //api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+	let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+	Axios.get(weatherUrl).then(handleResponse);
 
 	const [city, setCity] = useState(" ");
 
