@@ -1,17 +1,12 @@
 import React from "react";
 import UpdatedDate from "./UpdatedDate";
+import Icon from "./Icon";
 
 export default function Temperature(props) {
-
 	return (
 		<div className="container">
 			<div className="column-one column">
-				<img
-					src={props.weather.icon}
-					alt={props.weather.description}
-					width="80%"
-					className="sun-img"
-				/>
+				<Icon code={props.weather.info} />
 			</div>
 			<div className="column-two column">
 				<h2 className="temperature">
