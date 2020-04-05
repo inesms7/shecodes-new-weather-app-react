@@ -1,80 +1,58 @@
 /*import React, { useState } from "react";
 import "./App.css";
 import "./Forecast.css";
-import Axios from "axios";
+import axios from "axios";
+import Icon from "./Icon";
 
-export default function Forecast() {
-	return (
-		<div className="forecast">
-			<div className="forecast-container">
-				<div className="forecast-date">26 April</div>
-				<div className="forecast-date">27 April</div>
-				<div className="forecast-date">28 April</div>
-				<div className="forecast-date">29 April</div>
-				<div className="forecast-date">30 April</div>
-				<div className="forecast-date">1 May</div>
-				<div className="forecast-temperature">
-					<strong>10º</strong> 8º
-				</div>
-				<div className="forecast-temperature">
-					<strong>12º</strong> 10º
-				</div>
-				<div className="forecast-temperature">
-					<strong>9º</strong> 7º
-				</div>
-				<div className="forecast-temperature">
-					<strong>14º</strong> 10º
-				</div>
-				<div className="forecast-temperature">
-					<strong>18º</strong> 14º
-				</div>
-				<div className="forecast-temperature">
-					<strong>25º</strong> 20º
-				</div>
-				<div className="forecast-icon">
-					<img
-						src="https://i.dlpng.com/static/png/117769_preview.png"
-						alt=""
-						width="60px"
-					/>
-				</div>
-				<div className="forecast-icon">
-					<img
-						src="https://i.dlpng.com/static/png/117769_preview.png"
-						alt=""
-						width="60px"
-					/>
-				</div>
-				<div className="forecast-icon">
-					<img
-						src="https://i.dlpng.com/static/png/117769_preview.png"
-						alt=""
-						width="60px"
-					/>
-				</div>
-				<div className="forecast-icon">
-					<img
-						src="https://i.dlpng.com/static/png/117769_preview.png"
-						alt=""
-						width="60px"
-					/>
-				</div>
-				<div className="forecast-icon">
-					<img
-						src="https://i.dlpng.com/static/png/117769_preview.png"
-						alt=""
-						width="60px"
-					/>
-				</div>
-				<div className="forecast-icon">
-					<img
-						src="https://i.dlpng.com/static/png/117769_preview.png"
-						alt=""
-						width="60px"
-					/>
-				</div>
+export default function Forecast(props) {
+	const [loaded, setLoaded] = useState(false);
+	const [forecast, setForecast] = useState(null);
+
+	function showResponse(response) {
+		setForecast(response.data);
+		setLoaded(true);
+	}
+
+	function formatHours(date) {
+		let hours = date.getHours();
+		if (hours < 10) {
+			hours = `0${hours}`;
+		}
+		let minutes = date.getMinutes();
+		if (minutes < 10) {
+			minutes = `0${minutes}`;
+		}
+		return `${hours}:${minutes}`;
+	}
+
+	if (loaded && forecast.city === props.city) {
+		return (
+			<div className="WeatherForecast row">
+				{forecast.list.slice(0, 5).map(function (weather) {
+					return (
+						<div className="forecast">
+							<div className="forecast-container">
+								<div className="forecast-column">
+									{formatHours(new Date(props.weather.dt * 1000))}
+								</div>
+								<div className="forecast-date">
+									<Icon code={props.weather.weather[0].icon} />
+								</div>
+								<div className="forecast-temperature">
+									{Math.round(props.weather)}°C
+								</div>
+							</div>
+						</div>
+					);
+				})}
 			</div>
-		</div>
-	);
+		);
+	} else {
+		/*let apiKey = "e8b7da95b38b721d120705f7518a1b9d";
+		let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
+		axios.get(weatherUrl).then(showResponse);
+
+		return null;
+	}
 }
 */

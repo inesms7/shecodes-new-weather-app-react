@@ -37,6 +37,12 @@
     color: black;
 }
 
+.column-one {
+    display: block;
+    margin: 0 auto;
+}
+
+
 .column-two {
     text-align: center;
     font-size: 28px;

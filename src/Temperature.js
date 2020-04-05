@@ -2,16 +2,16 @@ import React from "react";
 import UpdatedDate from "./UpdatedDate";
 import Icon from "./Icon";
 import Convertor from "./Convertor";
+import "./App.css";
 
 export default function Temperature(props) {
 	return (
 		<div className="container">
 			<div className="column-one column">
-				<Icon code={props.weather.info} classNaMe="sun-img" />
+				<Icon code={props.weather.icon} className="sun-img" />
 			</div>
 			<div className="column-two column">
-				<Convertor celsius={props.data.temperature}/>
-				
+				<Convertor celsius={props.weather.temperature}/>
 			</div>
 			<div className="column-third column">
 				<h1>{props.weather.city}</h1>

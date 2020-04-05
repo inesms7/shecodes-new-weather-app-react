@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 
 export default function Convertor(props) {
 	function showCelsius(event) {
@@ -14,7 +15,7 @@ export default function Convertor(props) {
 	return (
 		<div>
 			<h2 className="temperature">
-				{Math.round(props.celsius.temperature)}{" "}
+				{Math.round(props.celsius)}{" "}
 				<span className="metrics">
 					º
 					<a href="#" onClick={showCelsius}>
