@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 
 export default function Temperature(props) {
 	const [temperature, setTemperature] = useState(props.temp);
