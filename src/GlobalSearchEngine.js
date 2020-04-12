@@ -5,7 +5,6 @@ import Temperature from "./Temperature";
 import Forecast from "./Forecast";
 import "./Forecast.css";
 
-
 import axios from "axios";
 
 export default function GlobalSearchEngine(props) {
@@ -71,7 +70,7 @@ export default function GlobalSearchEngine(props) {
 				</div>
 				<div className="NewForecast">
 					<Forecast city={city} />
-			</div>
+				</div>
 			</div>
 		);
 	} else {

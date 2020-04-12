@@ -3,7 +3,6 @@ import UpdatedDate from "./UpdatedDate";
 import Icon from "./Icon";
 import Convertor from "./Convertor";
 import "./Forecast.css";
-
 import "./App.css";
 
 export default function Temperature(props) {

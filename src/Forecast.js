@@ -3,8 +3,6 @@ import axios from "axios";
 import ForecastPreview from "./ForecastPreview";
 import "./Forecast.css";
 
-
-
 export default function Forecast(props) {
 	const [loaded, setLoaded] = useState(false);
 	const [forecast, setForecast] = useState(null);
@@ -24,14 +22,11 @@ export default function Forecast(props) {
 				<ForecastPreview data={forecast.list[4]} />
 			</div>
 		);
-
 	} else {
 		let apiKey = "e8b7da95b38b721d120705f7518a1b9d";
 		let weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
 		axios.get(weatherUrl).then(showResponse);
 
-		return (
-			"Li"
-		);
+		return null;
 	}
 }
