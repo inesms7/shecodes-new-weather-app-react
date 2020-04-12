@@ -4,6 +4,7 @@ import ForecastPreview from "./ForecastPreview";
 import "./Forecast.css";
 
 
+
 export default function Forecast(props) {
 	const [loaded, setLoaded] = useState(false);
 	const [forecast, setForecast] = useState(null);

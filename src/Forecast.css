@@ -10,3 +10,7 @@
 .Forecast .row {
     background: red;
 }
+
+.ForecastPreview{
+    width: 100%;
+}
