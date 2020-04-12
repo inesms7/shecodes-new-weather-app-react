@@ -3,6 +3,7 @@ import "./App.css";
 import "./GlobalSearchEngine.css";
 import Temperature from "./Temperature";
 import Forecast from "./Forecast";
+import "./Forecast.css";
 
 
 import axios from "axios";
@@ -68,7 +69,9 @@ export default function GlobalSearchEngine(props) {
 						</button>
 					</form>
 				</div>
-				<Forecast city={city} />
+				<div className="NewForecast">
+					<Forecast city={city} />
+			</div>
 			</div>
 		);
 	} else {
