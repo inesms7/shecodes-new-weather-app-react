@@ -2,6 +2,9 @@ import React from "react";
 import UpdatedDate from "./UpdatedDate";
 import Icon from "./Icon";
 import Convertor from "./Convertor";
+import Forecast from "./Forecast";
+import "./Forecast.css";
+
 import "./App.css";
 
 export default function Temperature(props) {
@@ -35,6 +38,9 @@ export default function Temperature(props) {
 						<UpdatedDate date={props.weather.date} />
 					</p>
 				</div>
+			</div>
+			<div className="NewForecast">
+				<Forecast />
 			</div>
 		</div>
 	);

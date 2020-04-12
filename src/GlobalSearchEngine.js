@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import "./GlobalSearchEngine.css";
 import Temperature from "./Temperature";
-import Forecast from "./Forecast";
+
+
 import axios from "axios";
 
 export default function GlobalSearchEngine(props) {
@@ -66,7 +67,6 @@ export default function GlobalSearchEngine(props) {
 						</button>
 					</form>
 				</div>
-				<Forecast city={weatherInfo.city} weather={weatherInfo.temperature} />
 			</div>
 		);
 	} else {
