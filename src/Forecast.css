@@ -1,16 +1,9 @@
-.Forecast{
+.Forecast {
     text-align: center;
+    margin: 20px 0
 }
 
-.Forecast canvas{
+.Forecast canvas {
     display: block;
-    margin: 10px auto;
-}
 
-.Forecast .row {
-    background: red;
-}
-
-.ForecastPreview{
-    width: 100%;
 }

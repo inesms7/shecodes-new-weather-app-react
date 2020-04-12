@@ -42,14 +42,14 @@ export default function GlobalSearchEngine(props) {
 		const lat = position.coords.latitude;
 		const lon = position.coords.longitude;
 
-		let apiKey = "3cfbc7eebafcf9149917ab5969c53e6c";
+		let apiKey = "e8b7da95b38b721d120705f7518a1b9d";
 		let weatherUrl = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
 		axios.get(weatherUrl).then(showResponse);
 	}
 
 	function search() {
-		let apiKey = "3cfbc7eebafcf9149917ab5969c53e6c";
+		let apiKey = "e8b7da95b38b721d120705f7518a1b9d";
 		let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 		axios.get(weatherUrl).then(showResponse);
 	}
