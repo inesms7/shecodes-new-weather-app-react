@@ -33,23 +33,8 @@ export default function GlobalSearchEngine(props) {
 		setCity(event.target.value);
 	}
 
-	function giveLocation(event) {
-		event.preventDefault();
-		navigator.geolocation.getCurrentPosition(showPosition);
-	}
-
-	function showPosition(position) {
-		const lat = position.coords.latitude;
-		const lon = position.coords.longitude;
-
-		let apiKey = "3cfbc7eebafcf9149917ab5969c53e6c";
-		let weatherUrl = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
-
-		axios.get(weatherUrl).then(showResponse);
-	}
-
 	function search() {
-		let apiKey = "3cfbc7eebafcf9149917ab5969c53e6c";
+		let apiKey = "b7ce8037f12666f5cde15cb10f203a92";
 		let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 		axios.get(weatherUrl).then(showResponse);
 	}
@@ -62,10 +47,6 @@ export default function GlobalSearchEngine(props) {
 					<form className="search-form" onSubmit={handleSubmit}>
 						<input type="search" className="form-input" onChange={findCity} />
 						<input type="submit" className="submit-form" value="Search" />
-
-						<button className="location" onClick={giveLocation}>
-							Current Location
-						</button>
 					</form>
 				</div>
 				<div className="NewForecast">
