@@ -11,7 +11,7 @@ export default function Temperature(props) {
 				<Icon code={props.weather.icon} className="sun-img" />
 			</div>
 			<div className="column-two column">
-				<Convertor celsius={props.weather.temperature}/>
+				<Convertor celsius={props.weather.temperature} />
 			</div>
 			<div className="column-third column">
 				<h1>{props.weather.city}</h1>

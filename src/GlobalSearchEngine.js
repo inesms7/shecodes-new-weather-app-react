@@ -6,7 +6,7 @@ import Forecast from "./Forecast";
 import axios from "axios";
 
 export default function GlobalSearchEngine(props) {
-	const [weatherinfo, showWeatherInfo] = useState({ ready: false });
+	const [weatherInfo, showWeatherInfo] = useState({ ready: false });
 	const [city, setCity] = useState(props.defaultCity);
 
 	function showResponse(response) {
@@ -31,25 +31,42 @@ export default function GlobalSearchEngine(props) {
 		setCity(event.target.value);
 	}
 
+	function giveLocation(event) {
+		event.preventDefault();
+		navigator.geolocation.getCurrentPosition(showPosition);
+	}
+
+	function showPosition(position) {
+		const lat = position.coords.latitude;
+		const lon = position.coords.longitude;
+
+		let apiKey = "3cfbc7eebafcf9149917ab5969c53e6c";
+		let weatherUrl = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+
+		axios.get(weatherUrl).then(showResponse);
+	}
+
 	function search() {
-		let apiKey = "e8b7da95b38b721d120705f7518a1b9d";
+		let apiKey = "3cfbc7eebafcf9149917ab5969c53e6c";
 		let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 		axios.get(weatherUrl).then(showResponse);
 	}
 
-	if (weatherinfo.ready) {
+	if (weatherInfo.ready) {
 		return (
 			<div>
 				<div className="column-fourth column">
-					<Temperature weather={weatherinfo} />
+					<Temperature weather={weatherInfo} />
 					<form className="search-form" onSubmit={handleSubmit}>
 						<input type="search" className="form-input" onChange={findCity} />
 						<input type="submit" className="submit-form" value="Search" />
 
-						<button className="location">Current Location</button>
+						<button className="location" onClick={giveLocation}>
+							Current Location
+						</button>
 					</form>
 				</div>
-				<Forecast city={weatherinfo.city} weather={weatherinfo.temperature} />
+				<Forecast city={weatherInfo.city} weather={weatherInfo.temperature} />
 			</div>
 		);
 	} else {
@@ -57,4 +74,3 @@ export default function GlobalSearchEngine(props) {
 		return "Searching...";
 	}
 }
-
